@@ -1,0 +1,9 @@
+<div>
+  <input type="text" placeholder="Pesquisar" [(ngModel)]="searchText" (input)="filterLabels()">
+  <select [(ngModel)]="selectedLabel">
+    <option value="">Selecione uma label</option>
+    <option *ngFor="let label of filteredLabels" [value]="label">{{ label }}</option>
+  </select>
+  <button (click)="searchNode()">Pesquisar</button>
+</div>
+<div id="mynetwork" style="width: 100%; height: 600px; border: 1px solid lightgray;"></div>
